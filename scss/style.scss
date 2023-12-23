@@ -21,11 +21,14 @@ $fixture-nombres: "fixture_libres", "fixture_30", "fixture_semanal", "fixture_50
 }
 
 body {
+    width:100%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: darkseagreen;
 
+
     .menu {
         list-style-type: none;
+        width:100%;
         margin: 0;
         padding: 10;
         overflow: hidden;
@@ -53,7 +56,7 @@ body {
 
 .messi {
     width: 100%;
-    padding: 0px;
+    padding: 10px;
 }
 
 .barra {
@@ -74,25 +77,30 @@ body {
     text-decoration: none;
 }
 
+
 .logo_container {
     background-color: skyblue;
     position: relative;
+    padding:20px;
 
     .logo {
-        width: 100px;
+        width: 10%;
         animation: rotate 5s linear infinite;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
         align-items: center;
-        margin-left: 30px;
+        margin-left: 2%;
+        display: flex;
     }
 
-    #titulologo {
+    .titulologo {
         font-family: "hello_januari";
         position: absolute;
         top: 50%;
-        left: 40%;
+        left: 30%;
         transform: translate(-50%, -50%);
-        font-size: 30px;
+        font-size: 150%;
+        display: flex;
+        margin-left: 15%;
     }
 }
 
@@ -227,21 +235,23 @@ th, td {
 }
 
 .contacto {
-    display: grid;
+    display: flex;
     grid-template-columns: 50% 50%;
     gap: 10px;
     align-items: center;
 
     .contacto_imagen {
         grid-column: 1 / 2;
+        display: flex;
 
         img {
             max-width: 50%;
             height: auto;
-            display: block;
+            display: flex;
             margin-left: 50%;
             margin-right: 20%;
             margin-bottom: 150px;
+            
         }
     }
 
@@ -312,155 +322,119 @@ th, td {
 
 }
 
- 
 footer {
-    background-color: #012510;
-    color: #fff ;
-    padding: 20px;
+  background-color: #012510;
+  color: #fff;
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 3px;
+
+  
+  .derecho{
+    padding: 10px;
+    display: flex;
+
+}
+
+  .pie {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 20px;
     margin-top: 30px;
 
     img {
-        max-width: 100px;
-        max-height: 100px;
-        margin-right: 30px;
-        animation: rotate 5s linear infinite;
+      width: 20%;
+      margin-right: 40px;
+      animation: rotate 5s linear infinite;
+      display: flex;
     }
 
     div {
-        display: flex;
-        align-items: center;
+      display: flex;
+      align-items: center;
+
+      .nombre_logo {
+        padding: 5px;
+        margin-left: 10%;
+      }
     }
 
     span {
-        font-family: "hello_januari";
-        text-align: center;
-        margin-left: 10px;
+      font-family: "hello_januari";
+      text-align: center;
+      margin-left: 10px;
+      width:200%;
+      padding: 3px;
+
     }
+
+
+    .contacto {
+      width:30%;
+      max-width: 100%;
+      margin-left: 50px;
+      display: flex;
+      flex-direction: column;
+      font-size: 80%;
+      text-align: center;
+      padding: 10px;
+    }
+  }
 }
 
 .contacto {
     text-align: left;
-    display: block;
     margin-left: 30px;
+    display:block ;
     .contacto_imagen{
         margin-right: 20px;
-        margin-bottom: 100px;
-    }
-}
-
-@media only screen and (max-width: 758px) {
-    .imagen_fecha img {
+        margin-bottom: -200px;
+        padding:10px;
         width: 100%;
-    }
-
-    .contacto {
-        text-align: center;
-        margin-left: 0; 
-        .contacto_imagen {
-            margin-bottom: 20px;
-        }
-    }
-
-    #titulologo {
-        font-size: 14px; 
-        margin-left: 0; 
-    }
-
-    .equipos-container,
-    .fixture_container {
-        flex-direction: column;
-        align-items: center;
-        overflow-x: auto;
-        
-        .equipos_30,
-        .equipos_libre,
-        .equipos_libresem,
-        .equipos_50,
-        .fixture_libres,
-        .fixture_30,
-        .fixture_semanal,
-        .fixture_50 {
-            min-width: auto;
-            margin-right: 0;
-            margin-bottom: 10px;
-        }
-    }
-
-    .equipos_libre {
-        flex: 1 1 100%;
-    }
-
-    .table-container {
-        overflow-x: auto;
-        table {
-            white-space: nowrap;
-        }
-    }
-
-    .contacto_formulario {
-        max-width: 100%; 
-        margin-right: 0; 
+    
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 767px) {
+    .titulologo {
+        font-size: 100% !important;
+        align-items: center !important;
+       
+
+    }
+
+
+    .pie{
+        display:inline-block !important;
+    }
     .contacto {
-        flex-direction: column;
-        align-items: center;
+        width: 90% !important;
 
-        .contacto_imagen {
-            margin-right: 0;
-            margin-bottom: 20px;
 
-            img {
-                max-width: 100%;  
-                height: auto;
-            }
+
+        .contacto_imagen{
+            width: 100% !important;
+            display: flex;
         }
-
         .contacto_formulario {
-            max-width: none;
-            margin-right: 0; 
+            margin-top: 10%;
+            width: 90%;
+            
 
-            label {
-                margin-bottom: 8px;
-            }
-
-            button {
-                margin-top: 10px;  
-            }
         }
     }
 
-    #titulologo {
-        font-size: 14px;  
-        margin-left: 0;  
-    }
+    footer{
+        width: 100%;
+        margin-top:3px;
+        .contacto{
 
-    .equipos-container, .fixture_container {
-        flex-direction: column;
-        align-items: center;
-        overflow-x: auto;
-
-        .equipos_30, .equipos_libre, .equipos_libresem, .equipos_50,
-        .fixture_libres, .fixture_30, .fixture_semanal, .fixture_50 {
-            min-width: auto;
-            margin-right: 0;
-            margin-bottom: 10px;
+            margin-top: 3px;
+            width: 90% !important ;
+            margin-top: 30px !important; 
+            display:flex;       
         }
     }
 
-    .equipos_libre {
-        flex: 1 1 100%;
-    }
-
-    .table-container {
-        overflow-x: auto;
-
-        table {
-            white-space: nowrap;
-        }
-    }
 }
