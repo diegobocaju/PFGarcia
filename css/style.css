@@ -70,7 +70,8 @@ body .menu {
 .logo_container {
   background-color: skyblue;
   position: relative;
-  padding: 20px;
+  padding: 10px;
+  width: 100%;
 }
 .logo_container .logo {
   width: 10%;
